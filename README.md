@@ -10,7 +10,7 @@ The website I'm going to develop is a download page of shared software and other
 我将要开发的网站是一个用于分享文件的内网下载页面，所以不可能在校园网外进行访问。
 
 ## What will this repo contains? / 这个库将包含一些什么？
-no limitied of:
+no limited of:
 - Weekly ChangeLog 
 - Source code of HTML and JavaScript
 - Ideas of development
