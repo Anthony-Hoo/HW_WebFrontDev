@@ -5,7 +5,7 @@ This is a homework of a front-end development class. The teacher asks us to fini
 这是一个web前端开发课程的家庭作业。老师要求我们独自完成一个网站并每周迭代开发。我想“为啥不把这个传到GitHub上呢”，于是我建立了这个库并每周上传代码。
 
 ## What is the mentioned website about? / 提到的这个网站是关于什么的？
-The website I'm going to develop is a download page of shared software and other files in LAN，so this website is a intranet website, and would never be accessible outside my school.
+The website I'm going to develop is a download page of shared software and other files in LAN, so this website is a intranet website, and would never be accessible outside my school.
 
 我将要开发的网站是一个用于分享文件的内网下载页面，所以不可能在校园网外进行访问。
 
