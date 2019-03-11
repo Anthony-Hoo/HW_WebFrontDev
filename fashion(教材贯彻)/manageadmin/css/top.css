@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+.header{height:88px;}
+.topleft{height:88px;background:url(../images/topleft.jpg) no-repeat;float:left; width:300px;}
+.topleft img{margin-top:12px;margin-left:10px;}
+.topright{height:88px;background:url(../images/topright.jpg) no-repeat right;float:right;}
+.nav{float:left;}
+.nav li{float:left;width:87px;height:88px; text-align:center;}
+.nav li a{display:block;width:87px;height:88px;-moz-transition: none; transition: background-color 0.3s linear; -moz-transition: background-color 0.3s linear; -webkit-transition: background-color 0.3s linear; -o-transition: background-color 0.3s linear; }
+.nav li a.selected{background:url(../images/navbg.png) no-repeat;}
+.nav li a:hover{display:block;background:#000;color:#fff;background: none repeat scroll 0% 0% rgb(43, 127, 181);}
+.nav li img{margin-top:10px;}
+.nav li a{display:block;}
+.nav a h2{font-size:14px;color:#d6e8f1;}
+.nav a:hover h2{color:#fff;}
+.topright ul{padding-top:15px; float:right; padding-right:12px;}
+.topright ul li{float:left; padding-left:9px; padding-right:9px; background:url(../images/line.gif) no-repeat right;}
+.topright ul li:last-child{background:none;}
+.topright ul li a{font-size:13px; color:#e9f2f7;}
+.topright ul li a:hover{color:#fff;}
+.topright ul li span{margin-top:2px;float:left;padding-right:3px;}
+.user{height:30px;background:url(../images/ub1.png) repeat-x;clear:both;margin-top:10px;float:right; margin-right:12px;border-radius:30px;  white-space:nowrap;position:relative;}
+.user span{display:inline-block;padding-right:10px; background:url(../images/user.png) no-repeat 15px 10px; line-height:30px; font-size:14px;color:#b8ceda; padding-left:20px; padding-left:35px;}
+.user b{display:inline-block;width:20px;height:18px; background:url(../images/msg.png);text-align:center; font-weight:normal; color:#fff;font-size:14px;margin-right:13px; margin-top:7px; line-height:18px;}
+.user i{display:inline-block;margin-right:5px;font-style:normal;line-height:30px; font-size:14px;color:#b8ceda;}
+

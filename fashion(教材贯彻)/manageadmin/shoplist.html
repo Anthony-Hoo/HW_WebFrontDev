@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>餐饮列表页面-后台管理</title>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/list.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.x.js"></script>
+<script type="text/javascript" src="js/tableOperator.js"></script>
+</head>
+<body>
+<div class="place"> <span>位置：</span>
+  <ul class="placeul">
+    <li><a href="main.html">首页</a></li>
+    <li><a href="#">购物后台管理</a></li>
+    <li><a href="#">商品列表</a></li>
+  </ul>
+  <div class="date_text"><img src="images/leftico04.png">&nbsp;今天是2015年2月10日 星期一 12：00</div>
+</div>
+<div class="rightinfo">
+  <div class="tools">
+    <ul class="toolbar">
+      <li ><span><img src="images/t01.png" /></span>添加</li>
+      <li ><span><img src="images/t02.png" /></span>修改</li>
+      <li class="click"><span><img src="images/t03.png" /></span>删除</li>
+      <li><a href="jqueryChart.html"><span><img src="images/t04.png" /></span>统计</a></li>
+      <li><span><img src="images/t05.png" /></span>设置</li>
+    </ul>
+    <iframe src="shop_search.html" scrolling="no" frameborder="0" width="400" height="42"></iframe>
+  </div>
+<table class="tablelist">
+<thead>
+  <tr>
+    <th><input name="checkAll" type="checkbox" id="checkAll" onchange="selectAll()"/>全选/
+    <input name="checkOther" type="checkbox" id="checkOther" onchange="selectOther()"/>反选
+    </th>
+    <th>缩略图</th>
+    <th>商品名称</th>
+    <th>商品类别</th>
+    <th>数量(件）</th>
+    <th>单价（元）</th>
+    <th>发布时间</th>
+    <th>是否审核</th>
+    <th>操作</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><input name="checkItem" type="checkbox" value="" /></td>
+    <td class="imgtd"><img src="images/img06.png" /></td>
+    <td>RAX头层牛皮户外鞋 男防滑登山鞋</td>
+    <td>运动</td>
+    <td>334</td>
+    <td>¥566.00</td>
+    <td>2015-06-06</td>
+    <td>已审核</td>
+    <td><a href="#" class="tablelink">查看</a> 
+        <a href="#" class="tablelink"> 删除</a></td>
+  </tr>
+  <tr class="odd">
+    <td><input name="checkItem" type="checkbox" value="" /></td>
+    <td class="imgtd"><img src="images/img07.png" /></td>
+    <td>七匹狼休闲裤春夏新款男士时尚裤</td>
+    <td>男装</td>
+    <td>455</td>
+    <td>¥236.00</td>
+    <td>2015-06-08</td>
+    <td>未审核</td>
+    <td><a href="#" class="tablelink">查看</a> 
+        <a href="#" class="tablelink">删除</a></td>
+  </tr>
+  <tr>
+    <td><input name="checkItem" type="checkbox" value="" /></td>
+    <td class="imgtd"><img src="images/img08.png" /></td>
+    <td>欧美大牌五分袖收腰显瘦睫毛蕾丝 </td>
+    <td>女装</td>
+    <td>899</td>
+    <td>¥136.00</td>
+    <td>2015-06-07</td>
+    <td>未审核</td>
+    <td><a href="#" class="tablelink">查看</a> 
+        <a href="#" class="tablelink">删除</a></td>
+  </tr>
+  <tr class="odd">
+    <td><input name="checkItem" type="checkbox" value="" /></td>
+    <td class="imgtd"><img src="images/img09.png" /></td>
+    <td>锐步REEBOK热2015新款</td>
+    <td>运动</td>
+    <td>3456</td>
+    <td>¥346.00</td>
+    <td>2015-06-06</td>
+    <td>已审核</td>
+    <td><a href="#" class="tablelink">查看</a> 
+        <a href="#" class="tablelink">删除</a></td>
+  </tr>
+  <tr>
+    <td><input name="checkItem" type="checkbox" value="" /></td>
+    <td class="imgtd"><img src="images/img10.png" /></td>
+    <td>新款中大童荷叶边短袖裙子韩版</td>
+    <td>童装</td>
+    <td>678</td>
+    <td>¥316.00</td>
+    <td>2015-06-05</td>
+    <td>已审核</td>
+    <td><a href="#" class="tablelink">查看</a> 
+        <a href="#" class="tablelink">删除</a></td>
+  </tr>
+</tbody>
+</table>
+<!--<script type="text/javascript">
+//全选或全不选
+function selectAll(){
+    var items=document.getElementsByName("checkItem");
+    var checkAll=document.getElementById("checkAll");
+    var checkOther=document.getElementById("checkOther");
+    checkOther.checked=false;
+    for(var i=0;i<items.length;i++){
+        items[i].checked=checkAll.checked;
+    }
+}
+//反选
+function selectOther(){
+    var items=document.getElementsByName("checkItem");
+    var checkAll=document.getElementById("checkAll");
+    var checkOther=document.getElementById("checkOther");
+    checkAll.checked=false;
+    for(var i=0;i<items.length;i++){
+        items[i].checked=!items[i].checked;
+    }		
+}
+</script>-->
+<!--<script type="text/javascript" src="js/jquery-1.x.js"></script>-->
+<script type="text/javascript">
+function selectAll(){
+	var items=$("[name='checkItem']");
+	var checkAll=$("#checkAll");
+	$("#checkOther").prop("checked",false);
+	for(var i=0;i<items.length;i++){
+		$(items[i]).prop("checked",checkAll.prop("checked"));
+	}	
+}
+function selectOther(){
+	var items=$("[name='checkItem']");
+	$("#checkAll").prop("checked",false);
+	for(var i=0;i<items.length;i++){
+		$(items[i]).prop("checked",!$(items[i]).prop("checked"));
+	}	
+}
+</script>
+  <div class="pagin">
+    <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+    <ul class="paginList">
+      <li class="paginItem"><a href="#"><span class="pagepre"></span></a></li>
+      <li class="paginItem"><a href="#">1</a></li>
+      <li class="paginItem current"><a href="#">2</a></li>
+      <li class="paginItem"><a href="#">3</a></li>
+      <li class="paginItem"><a href="#">4</a></li>
+      <li class="paginItem"><a href="#">5</a></li>
+      <li class="paginItem more"><a href="#">...</a></li>
+      <li class="paginItem"><a href="#">10</a></li>
+      <li class="paginItem"><a href="#"><span class="pagenxt"></span></a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

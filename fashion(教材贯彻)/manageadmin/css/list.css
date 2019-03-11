@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+.place{height:40px; background:url(../images/righttop.gif) repeat-x;}
+.place span{line-height:40px; font-weight:bold;float:left; margin-left:12px;}
+.placeul li{float:left; line-height:40px; padding-left:7px; padding-right:12px; background:url(../images/rlist.gif) no-repeat right;}
+.placeul li:last-child{background:none;}
+.rightinfo{padding:8px;}
+.tools{clear:both; height:35px; margin-bottom:8px;}
+.toolbar{float:right;}
+.toolbar li{background:url(../images/toolbg.gif) repeat-x; line-height:33px; height:33px; border:solid 1px #d3dbde; float:left; padding-right:10px; margin-right:5px;border-radius: 3px;  cursor:pointer;}
+.toolbar li span{float:left; margin-left:10px; margin-right:5px; margin-top:5px;}
+.toolbar1{float:right;}
+.toolbar1 li{background:url(../images/toolbg.gif) repeat-x; line-height:33px; height:33px; border:solid 1px #d3dbde; float:left; padding-right:10px; margin-left:5px;border-radius: 3px; }
+.toolbar1 li span{float:left; margin-left:10px; margin-right:5px; margin-top:5px;}
+.imgtable{width:100%;border:solid 1px #cbcbcb; }
+.imgtable th{background:url(../images/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:21px; text-align:left;}
+.imgtable td{line-height:20px; text-indent:21px; border-right: dotted 1px #c7c7c7;}
+.imgtable td img{margin:10px 20px 10px 0;}
+.imgtable td p{color:#919191;}
+.imgtable td i{font-style:normal; color:#ea2020;}
+.imgtd{text-indent:0;}
+.imgtable tbody tr.odd{background:#f5f8fa;}
+.imgtable tbody tr:hover{background:#e5ebee;}
+.intro_width{width:300px;word-wrap:break-word; overflow:hidden;}
+/*seachform*/
+.seachform{ height:42px; }
+.seachform li{float:left; margin-right:15px;}
+.seachform li label{padding-right:10px; float:left; line-height:32px;}
+.scinput{width:180px; height:32px; line-height:32px; border-top:solid 1px #a7b5bc; border-left:solid 1px #a7b5bc; border-right:solid 1px #ced9df; border-bottom:solid 1px #ced9df; background:url(../images/inputbg.gif) repeat-x; text-indent:10px; color:#999;}
+.scbtn{width:85px;height:35px; background:url(../images/btnbg.png) no-repeat center; font-size:14px;font-weight:bold;color:#fff; cursor:pointer;border-radius:3px; }
+select{background:url(../images/inputbg.gif) repeat-x;_background:none;_border:none;height:32px; border-top:solid 1px #a7b5bc; border-left:solid 1px #a7b5bc; border-right:solid 1px #ced9df; border-bottom:solid 1px #ced9df;padding:5px;}
+.tablelist{border:solid 1px #cbcbcb; width:100%; clear:both;}
+.tablelist th{background:url(../images/th.gif) repeat-x; height:34px; line-height:34px; border-bottom:solid 1px #b6cad2; text-indent:11px; text-align:left;}
+.tablelist td{line-height:35px; text-indent:11px; border-right: dotted 1px #c7c7c7;}
+.tablelink{color:#056dae;}
+.tablelist tbody tr.odd{background:#f5f8fa;}
+.tablelist tbody tr:hover{background:#e5ebee;}
+/*page分页*/
+.pagin{position:relative;margin-top:10px;padding:0 12px;}
+.pagin .blue{color:#056dae;font-style:normal;}
+.pagin .paginList{position:absolute;right:12px;top:0;}
+.pagin .paginList .paginItem{float:left;}
+.pagin .paginList .paginItem a{float:left;width:31px;height:28px;border:1px solid #DDD; text-align:center;line-height:30px;border-left:none;color:#3399d5;}
+.pagin .paginList .paginItem:first-child a{border-left:1px solid #DDD;}
+.pagin .paginList .paginItem:first-child a{border-bottom-left-radius:5px;border-top-left-radius:5px;}
+.pagin .paginList .paginItem:last-child a{border-bottom-right-radius:5px;border-top-right-radius:5px;}
+.pagin .paginList .paginItem.current,.pagin .paginList .paginItem.current a{background:#f5f5f5; cursor:default;color:#737373;}
+.pagin .paginList .paginItem:hover{background:#f5f5f5;}
+.pagin .paginList .paginItem.more,.pagin .paginList .paginItem.more a:hover{ cursor:default;}
+.pagin .paginList .paginItem.more:hover{background:#FFF;}
+.pagin .paginList .paginItem.more a{color:#737373;}
+.pagepre{background:url(../images/pre.gif) no-repeat center center; width:31px; height:28px;}
+.pagenxt{background:url(../images/next.gif) no-repeat center center; width:31px; height:28px;}

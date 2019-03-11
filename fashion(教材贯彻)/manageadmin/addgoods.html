@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加商品页面-后台管理系统</title>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/add.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.x.js"></script>
+<script type="text/javascript" src="js/cascadingMenu.js"></script>
+<script type="text/javascript">
+$(function(){
+	//自定义商品种类
+	var opts=[{
+			"text":"男装",
+			"value":"男装",
+			"subType":[{"value":"男士外套","text":"男士外套"},
+				{"value":"男士内搭","text":"男士内搭"},
+				{"value":"特色服装","text":"特色服装"}]
+		},{
+			"text":"女装",
+			"value":"女装",
+			"subType":[{"value":"开衫毛衣","text":"开衫毛衣"},
+				{"value":"印花连衣裙","text":"印花连衣裙"},
+				{"value":"时尚外套","text":"时尚外套"},
+				{"value":"休闲套装","text":"休闲套装"}]
+		},{
+			"text": "腕表",
+			"value": "腕表",
+			"subType": [{"value":"瑞士品牌","text":"瑞士品牌"},
+				{"value":"欧美品牌","text":"欧美品牌"},
+				{"value":"德国品牌","text":"德国品牌"},
+				{"value":"国产品牌","text":"国产品牌"}]
+		}];
+	//首先清空指定的元素，然后通过自定义的商品类型实现二级菜单级联
+	$(".vocation:first").empty().cascadingMenuPlugins(opts);
+	//首先清空指定的元素，然后通过默认的商品类型实现二级菜单级联
+	//$(".vocation:first").empty().cascadingMenuPlugins();
+});
+</script>
+<script type="text/javascript">
+	$(function(){
+		//为商品名称输入框绑定获得焦点和失去焦点时的处理函数
+		$("#goodsName").on("focus",function(){
+			$(this).css({backgroundColor:"#FFEC8B",borderColor:"#999",color:"#000000"});
+			if($(this).val()=="请填写商品名称"){
+				$(this).val("");
+			}
+		}).on("blur",function(){
+			$(this).css({backgroundColor:"#FFFFFF",borderColor:"",color:"#000000"});
+			if($(this).val()==""){
+				$(this).val("请填写商品名称");
+			}
+		});
+		//为单价和团购价绑定获得焦点时的处理函数
+		$("input[id$='Price']").on("focus",function(){
+			$(this).css({fontSize:"16px",color:"red"});
+		});
+		//为数量文本框绑定失去焦点时的处理函数
+		$("input[type='number']:last").on("blur",function(){
+			if($(this).val()<0){
+				alert("数量不能小于0");
+				$(this).select();
+			}
+		});
+		//判断日期格式是否有效
+		$("input[type='date']").on("blur",function(){
+			//日期格式验证2016-10-03或2016/10/03
+			var dateReg=/(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})/;
+			if(!dateReg.test($(this).val())){
+				alert("日期格式不正确，请输入yyyy-MM-dd或yyyy/MM/dd格式的日期");
+				$(this).select();
+			}			
+		});
+		
+		//为发布按钮绑定处理函数
+		$("input[type='submit']").on("click",function(){
+			if($("#thumbImage").val()==""){
+				alert("请选择商品缩略图!");
+				return false;
+			}
+			if($("#goodsName").val()==""||$("#goodsName").val()=="请填写商品名称"){
+				alert("请填写商品名称!");
+				return false;
+			}
+			if($(".tabson textarea").val()==""){
+                alert("请完善商品的详细信息！");
+				return false;
+            }
+			$(".tabson form").submit();
+		});
+	});
+</script>
+</head>
+<body>
+<div class="place"><span>位置：</span>
+  <ul class="placeul">
+    <li><a href="main.html" target="_parent">首页</a></li>
+    <li><a href="#">添加商品</a></li>
+  </ul>
+</div>
+<div class="formbody">
+  <div  class="usual">
+    <div class="tabson">
+        <form id="addgoodsForm" method="post" action="http://www.itshixun.com">
+          <ul class="forminfo">
+            <li>
+              <label>商品缩略图<b>*</b></label>
+              <input name="thumbImage" id="thumbImage" type="file"  multiple="multiple"/>
+            </li>
+            <li>
+              <label>商品名称<b>*</b></label>
+              <input name="goodsName" id="goodsName" type="text" class="dfinput" value="请填写商品名称"   
+                required="required" style="width:500px;"/>
+            </li>
+            <li>
+              <label>商品类别<b>*</b></label>
+              <div class="vocation">
+                <select class="select3" name="goodsType" id="goodsType">
+                  <option>男装</option>
+                  <option>女装</option>
+                  <option>童装</option>
+                  <option>运动</option>
+                  <option>其他</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <label>商品单价<b>*</b></label>
+              <input name="unitPrice" id="unitPrice" class="dfinput" type="number"  required="required"  style="width:100px;"/>元 </li>
+            <li>
+              <label>团购价<b>*</b></label>
+              <input name="groupPrice" id="groupPrice" class="dfinput" type="number"   required="required" style="width:100px;"/>元 </li>
+            <li>
+              <label>商品数量<b>*</b></label>
+              <input name="goodsNumber" id="goodsNumber" type="number" class="dfinput"  required="required" style="width:100px;"/>
+              件 </li>
+            <li>
+              <label>发布日期<b>*</b></label>
+              <input name="publishDate" id="publishDate" type="date" class="dfinput"  required="required" style="width:120px;"/>
+            </li>
+            <li>
+              <label>是否审核<b>*</b></label>
+              <div class="vocation">
+                <select class="select3" name="isChecked" id="isChecked">
+                  <option>已审核</option>
+                  <option>未审核</option>
+                </select>
+              </div>
+            </li>
+            <li>
+              <label>商品描述<b>*</b></label>
+              <textarea name="goodsDescription" rows="3" id="content"  style="width:500px;height:100px;"></textarea>
+            </li>
+            <li>  <label>&nbsp;</label>
+              <input type="submit" class="btn" id="btnPublish" value="马上发布"/>
+            </li>
+          </ul>
+        </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

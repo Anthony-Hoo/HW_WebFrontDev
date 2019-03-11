@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-size: 12px;
+	font-family: microsoft yahei;
+	margin: 0px;
+	color: black;
+}
+img {
+	border: none;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: #ce2626;
+	text-decoration: none;
+}
+.padding-top {
+	padding-top: 8px;
+}
+/*头部*/
+.top_line {
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+	font-family: "宋体";
+	line-height: 30px;
+}
+.nav_font16 {
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+.orange {
+	font-weight: bold;
+	color: #ff6600;
+}
+.nav_active {
+	background: #b12121;
+	padding: 5px 0px;
+	height: 30px;
+}
+a.white {
+	color: white;
+	text-decoration: none;
+}
+a.white:hover {
+	color: yellow;
+	text-decoration: none;
+}
+/*foot*/
+
+.padding-bottom {
+	padding-bottom: 10px;
+}
+/*注册*/
+.reg {
+	font-size: 12px;
+	line-height: 35px;
+}
+.reg input[type="text"], .reg input[type="password"] {
+	border: 1px solid #ccc;
+	padding: 5px;
+	height: 15px;
+	color: #999;
+}
+.reg select {
+	padding: 5px;
+	height: 30px;
+	margin-right: 5px;
+	color: #999;
+}
+.reg textarea {
+	color: #999;
+}
+.gray12 {
+	font-size: 12px;
+	color: #999;
+}
+.bian {
+	margin-top: 10px;
+}
+.bian:hover {
+	filter: alpha(opacity=50); /*IE滤镜，透明度50%*/
+	-moz-opacity: 0.5; /*Firefox私有，透明度50%*/
+	opacity: 0.5;/*其他，透明度50%*/
+}

@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>统计报表</title>
+    <script type="text/javascript" src="js/jquery-1.x.js"> </script>
+    <script type="text/javascript" src="js/jquery.chart.js"></script>
+    <link href="css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="css/add.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+<div class="place"> <span>位置：</span>
+  <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">统计报表</a></li>
+  </ul>
+</div>
+<div class="formbody">
+  <div class="usual">
+    <canvas id="myCanvas1" width="300" height="300" 
+        style="border:1px solid #ccc;margin-right:10px;"></canvas>
+    <canvas id="myCanvas2" width="300" height="300" 
+        style="border:1px solid #ccc;margin-right:10px;"></canvas>
+    <canvas id="myCanvas3" width="300" height="300" 
+        style="border:1px solid #ccc"></canvas>
+  </div>
+</div>
+<script type="text/javascript">
+	var data = {drawData:[{name:"女装",amount:40},
+		{name:"男装",amount:80},
+		{name:"童装",amount:50},
+		{name:"运动",amount:35},
+		{name:"内衣",amount:60}]
+	};
+	var options={bgColor:[{drawColor:"#9cc507"},
+			{drawColor:"#8b86ca"},
+			{drawColor:"#ff4400"},
+			{drawColor:"#ffb81d"},
+			{drawColor:"#00b3e3"}]
+		,frontColor:{
+			font:" 16px microsoft",
+			color:"black"
+		}
+	};
+	//使用自定义样式
+	$("#myCanvas1").drawChart(data,options,"PieChart");
+	$("#myCanvas2").drawChart(data,options,"Columnar");
+	$("#myCanvas3").drawChart(data,options,"FoldLine");
+	//使用图标插件默认的样式
+	/*
+		$("#myCanvas1").drawChart(data,null,"PieChart");
+		$("#myCanvas2").drawChart(data,null,"Columnar");
+		$("#myCanvas3").drawChart(data,null,"FoldLine");
+	*/
+	</script>
+</body>
+</html>
