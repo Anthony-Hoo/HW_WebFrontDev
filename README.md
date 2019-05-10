@@ -1,4 +1,4 @@
-# HW_WebFrontDev
+# HW_WebFront
 ## Why I create this repo? / 我创建这个库干嘛？
 This is a homework of a front-end development class. The teacher asks us to finish a website ourselves and iteration update Weekly. And I think "why not upload it to GitHub?" so I created this repo and push my code there weekly.
 
